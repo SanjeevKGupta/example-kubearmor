@@ -1,5 +1,4 @@
 {
-    "HZN_ORG_ID": "akx",
     "MetadataVars": {
 	"SERVICE_NAME": "${EDGE_OWNER}.${EDGE_DEPLOY}.helm.operator",
 	"SERVICE_VERSION": "0.0.1"
