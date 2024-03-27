@@ -11,13 +11,16 @@
 OPERATOR_DASH_NAME=kubearmor-operator
 NAMESPACE=openhorizon-agent
 
+all: helm-chart operator-tar publish-service publish-policy
+
 helm-chart:
 	helm repo add kubearmor https://kubearmor.github.io/charts
 	helm repo update kubearmor
 	helm template kubearmor/${OPERATOR_DASH_NAME} -n ${NAMESPACE} >> ${OPERATOR_DASH_NAME}.yaml
+	wget https://raw.githubusercontent.com/kubearmor/KubeArmor/main/deployments/helm/KubeArmorOperator/crds/operator.kubearmor.com_kubearmorconfigs.yaml
 
 operator-tar:
-	tar cvfz horizon/${OPERATOR_DASH_NAME}.tar.gz ${OPERATOR_DASH_NAME}.yaml
+	tar cvfz horizon/${OPERATOR_DASH_NAME}.tar.gz ${OPERATOR_DASH_NAME}.yaml operator.kubearmor.com_kubearmorconfigs.yaml
 	sed -i -e 's/.*operatorYamlArchive.*/\t"operatorYamlArchive": "${OPERATOR_DASH_NAME}.tar.gz"/' horizon/service-definition.json
 
 publish-service:
