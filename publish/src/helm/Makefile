@@ -23,12 +23,12 @@ operator-tar:
 publish-service:
 	@echo ""
 	@echo "Publishing service ... "
-	hzn exchange service publish -v -O -f horizon/service-definition.json
+	hzn exchange service publish -O -f horizon/service-definition.json
 
 publish-policy:
 	@echo ""
 	@echo "Publishing deployment policy ... "
-	hzn exchange deployment addpolicy -v -f horizon/deploy-policy.json deploy-policy-${EDGE_OWNER}.${EDGE_DEPLOY}.helm.operator_$(ARCH)
+	hzn exchange deployment addpolicy -f horizon/deploy-policy.json deploy-policy-${EDGE_OWNER}.${EDGE_DEPLOY}.helm.operator_$(ARCH)
 
 # This imports the variables from oprator.json
 .hzn.json.tmp.mk: horizon/hzn.json
