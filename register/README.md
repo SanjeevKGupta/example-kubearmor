@@ -28,4 +28,13 @@ kubectl exec -it <agent-pod> -n openhorizon-agent -- hzn eventlog ls
 7. Verifu the deployed pod
 ```
 kubectl get pods -n openhorizon-agent
+
+NAME                                        READY   STATUS    RESTARTS   AGE
+agent-577b45db8d-76486                      1/1     Running   0          5h1m
+kubearmor-operator-6dc4d675c6-xksd9         1/1     Running   0          4m29s
+kubearmor-relay-847bbc4896-p5jvm            1/1     Running   0          4m8s
+kubearmor-apparmor-containerd-f0a8b-z6rm5   1/1     Running   0          3m47s
+kubearmor-controller-5cf5b8d7b5-7hg67       2/2     Running   0          3m3s
+auto-upgrade-cronjob-28527699-pgs9d         1/1     Running   0          8s
+
 ```
