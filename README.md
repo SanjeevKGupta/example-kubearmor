@@ -1,6 +1,6 @@
 ## Open Horizon with KubeArmor [ONE Summit]
 
-Open Horizon working with `kubearmor` provides Runtime Security for your workload. To setup a quick demo
+Open Horizon working with `kubearmor` provides Runtime Security for your workload. To setup a demo you may follow these steps.
 
 #### Linux host
 1. Create VM to deploy your workload. In my setup I used Ubuntu 22.04 LTS (4 vCPU, 8GB)
