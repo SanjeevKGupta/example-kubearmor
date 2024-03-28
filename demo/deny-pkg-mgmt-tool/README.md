@@ -1,11 +1,13 @@
-### Deny package management tool execution
+## Deny package management tool execution
 
 Deny execution of package management tools (apt/apt-get)
 
 Referecne: https://docs.kubearmor.io/kubearmor/quick-links/deployment_guide
 
-Run following commands one by one 
+### Prerequisite
+- Make sure that you have created the [k8s context](../README.md) as mentioned here
 
+### Run following commands one by one 
 #### Setup the test environment
 ```
 1-setup.sh
