@@ -48,3 +48,9 @@ export EDGE_DEPLOY=<example.kubearmor>
 ```
 make
 ```
+6. Verify
+```
+hzn exchange service list | grep kubearmor.helm
+
+hzn exchange deployment listpolicy | grep kubearmor.helm
+```
