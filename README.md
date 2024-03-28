@@ -17,5 +17,5 @@ Open Horizon working with `kubearmor` provides Runtime Security for your workloa
 
 #### Demo [demo]
 6. Follow through these demos to see the impact.
-   - [Deny package management tool execution](./deny-pkg-mgmt-tool/)
+   - [Deny package management tool execution](./demo/deny-pkg-mgmt-tool/)
    - more to come...
