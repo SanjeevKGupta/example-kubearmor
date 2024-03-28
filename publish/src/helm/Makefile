@@ -22,11 +22,10 @@ helm-chart:
 	wget https://raw.githubusercontent.com/kubearmor/KubeArmor/main/deployments/helm/KubeArmorOperator/crds/operator.kubearmor.com_kubearmorconfigs.yaml
 	mv operator.kubearmor.com_kubearmorconfigs.yaml ./tmp/config/crd/bases/.
 	wget https://raw.githubusercontent.com/kubearmor/KubeArmor/main/pkg/KubeArmorOperator/config/samples/sample-config.yml
-	sed -i -e 's/.*namespace: kubearmor/  namespace: openhorizon-agent/' sample-config.yml
+	sed -i -e 's/.*namespace: kubearmor/  namespace: ${OPEARTOR_NAMESPACE}/' sample-config.yml
 	mv sample-config.yml ./tmp/config/samples/sample-config.yaml
 
 operator-tar:
-#	tar cvfz horizon/${OPERATOR_DASH_NAME}.tar.gz ${OPERATOR_DASH_NAME}.yaml operator.kubearmor.com_kubearmorconfigs.yaml
 	cd tmp; \
 	tar -cf ${OPERATOR_DASH_NAME}.tar   ${OPERATOR_DASH_NAME}.yaml; \
 	tar -f ${OPERATOR_DASH_NAME}.tar -r config/crd/bases/operator.kubearmor.com_kubearmorconfigs.yaml; \
