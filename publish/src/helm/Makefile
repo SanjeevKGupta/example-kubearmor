@@ -16,7 +16,7 @@ all: helm-chart operator-tar publish-service publish-policy
 helm-chart:
 	helm repo add kubearmor https://kubearmor.github.io/charts
 	helm repo update kubearmor
-	helm template kubearmor/${OPERATOR_DASH_NAME} -n ${NAMESPACE} >> ${OPERATOR_DASH_NAME}.yaml
+	helm template kubearmor/${OPERATOR_DASH_NAME} -n ${NAMESPACE} > ${OPERATOR_DASH_NAME}.yaml
 	wget https://raw.githubusercontent.com/kubearmor/KubeArmor/main/deployments/helm/KubeArmorOperator/crds/operator.kubearmor.com_kubearmorconfigs.yaml
 
 operator-tar:
