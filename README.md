@@ -15,6 +15,7 @@ Open Horizon working with `kubearmor` provides Runtime Security for your workloa
 #### Deploy on Edge Cluster node - [register]
 5. Deploy the kubearmor K8s operator into the cluster. [Register instructions here](./register) 
 
-#### Demos 
+#### Demo [demo]
 6. Follow through these demos to see the impact.
-   - TODO - WIP 
+   - [Deny package management tool execution](./deny-pkg-mgmt-tool/)
+   - more to come...
