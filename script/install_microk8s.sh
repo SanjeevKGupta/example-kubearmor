@@ -4,7 +4,7 @@
 #
 
 usage() {
-    echo "Usage: $0 -h -i -d -u"
+    echo "Usage: $0 -h -i -d -n"
     echo ""
     echo -e "${FG_BBLUE}Deploys microk8s cluster in a vm ${FG_OFF}"
     echo ""
@@ -12,7 +12,7 @@ usage() {
     echo "   -h help "
     echo "   -c Create microk8s cluster"
     echo "   -d Delete microk8s cluster"
-    echo "   -u Non-root userid"
+    echo "   -n Non-root userid"
     echo ""
 }
 
