@@ -4,9 +4,10 @@
 #
 
 usage() {
-    echo "Usage: $0 -h -i -d -n"
+    echo "Usage: $0 -h -i -c -d -n"
     echo ""
     echo -e "${FG_BBLUE}Deploys microk8s cluster in a vm ${FG_OFF}"
+    echo -e "${FG_BBLACK}User running this must have sudo privilege on the host.${FG_OFF}"
     echo ""
     echo "where "
     echo "   -h help "
