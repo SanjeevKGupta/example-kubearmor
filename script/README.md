@@ -5,8 +5,9 @@ These scrupts makes the process efficient and repeatable.
    - You should be logged in as a `non-root` user having `sudo` privilege.
      
      Example:
+     ```
      ./install_microk8s.sh -c -n <non-root-user>
-
+     ```
 2. `oh-cluster-agent-install.sh` - Wraps around original `agent-install.sh` to automate the step-by-step process.
     - You should be logged in as a `non-root` user having `sudo` privilege.
 
